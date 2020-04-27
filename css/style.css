@@ -326,6 +326,9 @@ td, th {
 .guide-content{
     padding-bottom:3.9rem;
 }
+#hero-content{
+    display:none;
+}
 @media (min-width: 1024px){
     .nav li{
         float:left;
