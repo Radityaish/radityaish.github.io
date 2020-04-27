@@ -328,6 +328,7 @@ td, th {
 }
 #hero-content{
     display:none;
+    padding-bottom:3.9rem;
 }
 @media (min-width: 1024px){
     .nav li{
