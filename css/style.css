@@ -1,0 +1,358 @@
+body{
+    margin:0;
+    font-family: 'Arial Light', Arial, sans-serif;
+    background-color: #ffffff;
+    box-sizing:border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/* nav Start */
+a{
+    color:#9d9da2;
+    text-decoration:none;
+}
+
+.nav{
+    background-color:#101010;
+    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+    position: absolute;
+    width:100%;
+    z-index: 2;
+}
+
+.nav ul{
+    margin:0;
+    list-style:none;
+    overflow:hidden;
+    background-color:#101010;
+}
+
+.nav ul a{
+    display:block;
+    padding:20px;
+}
+/* Link Text Changes Color when mouse hover over it */
+.nav ul a:hover{
+   color:#d7d7d9 ;
+   text-shadow: 1px 1px 4px #f3f3f3;
+}
+
+.nav .logo{
+    float:left;
+    display:block;
+    font-size:2rem;
+    padding:10px 20px;
+}
+/*Menu Animation/styling*/
+.nav .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .7s ease-out;
+}
+
+.nav .menu-icon{
+    padding: 28px 20px;
+    position:relative;
+    float:right;
+    cursor: pointer;
+}
+
+.nav .menu-icon .nav-icon{
+    background:#333;
+    display:block;
+    height:2px;
+    width:18px;
+    position:relative;
+    transition:background .1s ease-out;
+}
+
+.nav .menu-icon .nav-icon:before{
+    background:#333;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition: .1s ease-out;
+    top:5px;
+
+}
+
+.nav .menu-icon .nav-icon:after{
+    background:#333;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .1s ease-out;
+    top:-5px;  
+}
+
+.nav .menu-btn{
+    display:none;
+}
+.nav .menu-icon:hover{
+    background-color: white;
+    transition: 1s;
+}
+.nav .menu-btn:checked ~ .menu{
+    max-height:30rem;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .nav-icon{
+    background:transparent;
+}
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-225deg);
+    top:0;
+}
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(225deg);
+    top:0;
+}
+/* Menu Animation etc*/
+
+/* nav END */
+
+.header-home{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2)),url("../image/elandor-header.jpg");
+    color: #fff;
+    text-align: center;
+    
+}
+
+.text-home{
+    padding-top: 30vh;
+    margin:50px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #101010;
+}
+
+.button{
+    color: #fff;
+    background:#101010;
+    display: inline-flex;
+    padding: 12px 27px;
+    margin-top: 30px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 18px #101010;
+    transition:0.4s;
+}
+
+.button:hover{
+    background: #fff;
+    color:#101010;
+    transition:0.5s;
+    padding: 15px 30px;
+}
+
+strong{
+    font-size: 23px;
+}
+
+.footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top:2px;
+    padding-bottom:2px;
+    background-color: #101010;
+    color: white;
+    text-align: center;
+}
+
+.content{
+    text-align: center;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+.text-about{
+    padding-top:5rem;
+}
+.text-content{
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom: 3rem;
+}
+.line{
+    border: 3px solid #FF9900 ;
+    width:50%;
+    left:25%;
+    right:25%;
+    position: absolute;
+} 
+.text-contact{
+    padding-top:5rem;
+}
+.contact{
+    padding-top:10px;
+    padding-left:10%;
+    padding-right:10%;  
+}
+.contact-text{
+    float:left;
+}
+input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:hover{
+    border: 1px solid #101010;
+}
+textarea{
+    height:20em;
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding:12px;
+}
+textarea:hover{
+    border: 1px solid #101010;
+}
+.btncontact{
+    padding: 10px 13px;
+    color:#101010;
+    background-color: #cccccc;
+    cursor:pointer;
+    border:none;
+    float: right;
+    margin-left: 5px;
+    transition:0.5s;
+}
+.btncontact:hover{
+    color:#cccccc;
+    background-color:#101010;
+    transition:0.5s;  
+}
+#servicesb{
+    display:none;
+    padding-left:10px;
+    padding-right:10px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #101010;
+}
+tr:hover{
+    background-color:#FF9900;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+.no{
+    padding:8px;
+}
+.services-content{
+    padding-bottom:100px;
+}
+.btnservices{
+    color: #101010;
+    border: 1px solid #101010;
+    cursor:pointer;
+    padding:10px;
+}
+.btnservices:hover{
+    color:#ffffff;
+    background-color:#101010;
+}
+.text-guide{
+    padding-top:5rem;
+}
+.nexus{
+    width:60%;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: #101010;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-heroes{
+    padding-top:5rem;
+}
+.guide-content{
+    padding-bottom:3.9rem;
+}
+@media (min-width: 1024px){
+    .nav li{
+        float:left;
+    }
+    .nav li a{
+        padding:20px 30px;
+    }
+    .nav .menu{
+        clear:none;
+        float:right;
+        max-height:none;    
+    }
+    .nav .menu-icon{
+        display:none;
+    }
+    .nav{
+        position:fixed;
+    }
+    .contact{
+        padding-top:10px;
+        padding-left:30em;
+        padding-right:30em;  
+    }
+    #servicesb{
+        padding-left:100px;
+        padding-right:100px;
+    }
+
+}
+
